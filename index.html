@@ -488,6 +488,19 @@
             </a>
           </div>
         </div>
+
+        <form class="subscribe-section">
+          <label class="subscribe-title" for="subscribe-email">
+            <p>Subscribe to the newsletter</p>
+          </label>
+          <input type="email" placeholder="E-mail" />
+            <button class="">
+              Subscribe
+              <svg class="subscribe-icon">
+                <use href="./images/icons.svg#icon-subscribeSend"></use>
+              </svg>
+            </button>
+        </form>
       </footer>
     </div>
 
@@ -531,17 +544,20 @@
             ></textarea>
           </label>
 
-          <label>
-            <input type="checkbox" class="check-mark" />
-            <svg class="modal-form-icons checked-icon">
+          <label class="termns-and-conditions-section">
+            <input type="checkbox" class="check-mark" checked="checked" />
+            <svg class="checked-icon">
               <use href="./images/icons.svg#icon-checkbox"></use>
+            </svg>
+            <svg class="checked-icon accept-icon">
+              <use href="./images/icons.svg#icon-checkboxChecked"></use>
             </svg>
             <span>
               I agree with the letter and accept the
               <span class="terms-and-conditions">Terms and Conditions</span>
             </span>
           </label>
-          <button class="modal-send-btn">Send</button>
+          <button type="submit" class="modal-send-btn">Send</button>
         </form>
 
         <button class="close-button" data-modal-close>&times;</button>

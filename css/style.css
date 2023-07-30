@@ -546,6 +546,65 @@ h2 {
   color: white;
 }
 
+.subscribe-section input {
+  width: 358px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(33, 150, 243, 0);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  padding: 15px 16px;
+  outline: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--text-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.48px;
+  margin-right: 12px;
+}
+
+.subscribe-section .subscribe-title {
+  color: #fff;
+  font-family: var(--text-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
+.subscribe-section button {
+  width: 200px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: none;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  text-align: left;
+  padding: 10px 77px 10px 43px;
+  font-family: var(--text-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.96px;
+  cursor: pointer;
+  margin-top: 18px;
+  position: absolute;
+}
+
+.subscribe-section .subscribe-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  fill: #fff;
+  position: absolute;
+  right: 28px;
+  top: 13px;
+}
+
 /* Portfolio page */
 .portfolio-layout-page {
   display: flex;
@@ -744,7 +803,6 @@ h2 {
 
 .modal-content {
   width: 528px;
-  height: 581px;
   flex-shrink: 0;
   background-color: #fff;
   border-radius: 4px;
@@ -773,6 +831,12 @@ h2 {
   border-radius: 50%;
   color: #000000;
   font-size: 18px;
+  transition: var(--transition-value);
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #2196f3;
 }
 
 /* Modal formular content */
@@ -816,12 +880,6 @@ h2 {
   flex-shrink: 0;
 }
 
-/* .checked-icon {
-  width: 16px;
-  height: 15px;
-  flex-shrink: 0;
-} */
-
 .form .modal-form-icons {
   position: absolute;
   top: 30px;
@@ -837,8 +895,57 @@ h2 {
   padding-left: 42px;
 }
 
+.modal-content .form input:focus,
+.comment-form textarea:focus {
+  border: 1px solid #2196f3;
+  outline: none;
+  transition: var(--transition-value);
+}
+
+.form:focus-within > svg {
+  color: #2196f3;
+  transition: var(--transition-value);
+}
+.comment-form textarea {
+  width: 448px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 12px 16px;
+  color: rgba(117, 117, 117, 0.5);
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  resize: none;
+}
+
 .modal-content .check-mark {
   display: none;
+}
+
+.check-mark ~ .checked-icon {
+  width: 16px;
+  height: 15px;
+  flex-shrink: 0;
+  left: 37px;
+}
+
+.check-mark ~ .checked-icon ~ .accept-icon {
+  visibility: hidden;
+  position: absolute;
+  left: 45px;
+}
+
+.check-mark:checked ~ .checked-icon {
+  visibility: visible;
+}
+
+.termns-and-conditions-section {
+  margin-top: 20px;
+  cursor: pointer;
+  align-self: center;
 }
 
 .modal-content .terms-and-conditions {
@@ -862,4 +969,6 @@ h2 {
   line-height: 30px;
   letter-spacing: 0.96px;
   cursor: pointer;
+  align-self: center;
+  margin-top: 30px;
 }
